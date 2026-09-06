@@ -1,19 +1,108 @@
 <!doctype html>
 <html lang="en">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Title</title>
-    <link
-      rel="stylesheet"
-      href="src/styles/main.scss"
-    />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kickstarter</title>
+  <link rel="stylesheet" href="src/styles/main.scss" />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+
+  <body class="page__body">
+
+    <!---------- Header ---------->
+    <header class="header" id="header"
+     role="banner">
+      <div class="container header__container">
+        <!---------- Header Top ---------->
+
+        <a href="/" class="header__logo-link"
+        aria-label="CRAZYBABY Home">
+        <img src="./src/images/logo.svg" alt="" class="header__logo">
+        </a>
+
+        <!---------- Menu mobile ---------->
+        <aside class="header__mobile-menu nav" id="mobile-menu" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="nav__top">
+          <a href="/" class="nav__logo-link" aria-label="CRAZYBABY Home">
+            <img src="./src/images/logo.svg" alt="" class="header__logo">
+          </a>
+          <button type="button" class="nav__close" id="menu-close" aria-label="Close navigation menu">
+            <img src="./src/images/icon-close.svg" alt="" class="nav__close-icon">
+          </button>
+        </div>
+        <nav class="nav__body" aria-label="Mobile Menu Links">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#story" class="nav__link">OUR STORY</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">ABOUT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="#features" class="nav__link">FEATURES</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">GET IN TOUCH</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="nav__bottom-actions">
+          <a href="#specs" class="nav__specs">SPECS</a>
+          <div class="nav__lang" role="region" aria-label="Language selector">
+            <span class="nav__lang-item nav__lang-item--active" aria-current="page">EN</span>
+            <span class="nav__lang-divider" aria-hidden="true">/</span>
+            <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
+          </div>
+        </div>
+        <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
+        </aside>
+
+        <!---------- Actions language (tablet, desktop) ---------->
+        <div class="header__actions">
+        <a href="#specs" class="header__specs" id="specs-link">SPECS</a>
+
+        <div class="header__lang" role="region" aria-label="Language selector">
+          <span class="nav__lang-item nav__lang-item--active" aria-current="page">EN</span>
+          <span class="nav__lang-divider" aria-hidden="true">/</span>
+          <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
+        </div>
+
+        <a href="#buy" class="button button--primary header__buy-btn" id="buy-btn">BUY</a>
+
+        <!--------------- Burger menu ---------->
+        <button class="header__burger" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open navigation menu" type="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        </div>
+
+      </div>
+
+      <!---------- Header Main ---------->
+      <div class="header__main container">
+        <div class="header__text-content">
+          <h1 class="header__title">Futuristic Wireless Speaker</h1>
+          <p class="header__description">Luna’s performance is balanced and smooth in all frequency ranges which makes the
+          music both naturally pleasant and
+          distinctly more layered.
+          </p>
+        </div>
+        <div class="header__image-wrapper">
+          <img src="./src/images/header/1-320.jpg"
+                    srcset="./src/images/header/1х320.jpg 320w,
+                      ./src/images/header/2-768.jpg 768w,
+                      ./src/images/header/3-1440.jpg 1440w"
+                       sizes="(max-width: 767px) 320px,
+                      (max-width: 1439px) 768px,
+                      1440px" alt="Futuristic Wireless Speaker"     class="header__image">
+        </div>
+      </div>
+    </header>
     <script src="src/scripts/main.js"></script>
   </body>
+
 </html>

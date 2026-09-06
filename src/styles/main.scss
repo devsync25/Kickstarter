@@ -1,7 +1,18 @@
 @import 'utils';
 @import 'fonts';
+@import 'reset';
 @import 'typography';
 
+@import 'block/header';
+@import 'block/button';
+@import 'block/nav';
+
 body {
-  background: $c-gray;
+  font-family: $ff-main;
+  color: $c-black;
+  background: $c-white;
+}
+
+.container {
+  @include container;
 }
