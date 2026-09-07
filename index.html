@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kickstarter</title>
+    <link rel="stylesheet" crossorigin href="/Kickstarter/assets/index-CwShjTsG.css">
+  </head>
+
+  <body class="page__body">
+
+    <!---------- Header ---------->
+    <header class="header" id="header"
+     role="banner">
+      <div class="container header__container">
+        <!---------- Header Top ---------->
+
+        <a href="/" class="header__logo-link"
+        aria-label="CRAZYBABY Home">
+          <img src="/Kickstarter/assets/logo-DN1Rqn-L.svg"
+            alt=""
+            class="header__logo">
+        </a>
+
+        <!---------- Menu mobile ---------->
+        <aside class="header__mobile-menu nav" id="mobile-menu" aria-label="Mobile Navigation" aria-hidden="true">
+          <div class="nav__top">
+          <a href="/" class="nav__logo-link" aria-label="CRAZYBABY Home">
+            <img src="/Kickstarter/assets/logo-DN1Rqn-L.svg" alt="" class="header__logo">
+          </a>
+          <button type="button" class="nav__close" id="menu-close" aria-label="Close navigation menu">
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.1943%206.41714C19.6393%205.97216%2019.6393%205.2507%2019.1943%204.80571C18.7493%204.36073%2018.0278%204.36073%2017.5829%204.80571L12%2010.3886L6.41714%204.80572C5.97216%204.36073%205.2507%204.36073%204.80571%204.80571C4.36073%205.2507%204.36073%205.97216%204.80571%206.41714L10.3886%2012L4.80572%2017.5829C4.36073%2018.0278%204.36073%2018.7493%204.80571%2019.1943C5.2507%2019.6393%205.97216%2019.6393%206.41714%2019.1943L12%2013.6114L17.5829%2019.1943C18.0278%2019.6393%2018.7493%2019.6393%2019.1943%2019.1943C19.6393%2018.7493%2019.6393%2018.0278%2019.1943%2017.5829L13.6114%2012L19.1943%206.41714Z'%20fill='%231B2129'/%3e%3c/svg%3e" alt="" class="nav__close-icon">
+          </button>
+          </div>
+          <nav class="nav__body" aria-label="Mobile Menu Links">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#story" class="nav__link">OUR STORY</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">ABOUT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="#features" class="nav__link">FEATURES</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">GET IN TOUCH</a>
+            </li>
+          </ul>
+          </nav>
+
+          <div class="nav__bottom-actions">
+            <a href="#specs" class="nav__specs">SPECS</a>
+            <div class="nav__lang" role="region"
+             aria-label="Language selector">
+              <a href="#en" class="nav__lang-item nav__lang-item--active"
+              hreflang="en">EN</a>
+              <span class="nav__lang-divider" aria-hidden="true">/</span>
+              <a href="#ua" class="nav__lang-item"
+              hreflang="uk">UA</a>
+            </div>
+          </div>
+          <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
+        </aside>
+
+        <!---------- Actions language (tablet, desktop) ---------->
+        <div class="header__actions">
+          <a href="#specs" class="header__specs"
+          id="specs-link">SPECS</a>
+
+          <div class="header__lang" role="region"
+          aria-label="Language selector">
+            <a class="nav__lang-item nav__lang-item--active" aria-current="page">EN</a>
+            <span class="nav__lang-divider" aria-hidden="true">/</span>
+            <a href="#ua" class="nav__lang-item"
+             hreflang="uk">UA</a>
+          </div>
+
+          <a href="#buy" class="button button--primary header__buy-btn"
+           id="buy-btn">BUY</a>
+
+          <!--------------- Burger menu ---------->
+          <button class="header__burger" id="menu-toggle"
+          aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open navigation menu" type="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </div>
+
+      <!---------- Header Main ---------->
+      <div class="header__main container">
+        <div class="header__text-content">
+          <h1 class="header__title">Futuristic Wireless Speaker</h1>
+          <p class="header__description">Luna’s performance is balanced and smooth in all frequency ranges which makes the
+          music both naturally pleasant and
+          distinctly more layered.
+          </p>
+        </div>
+        <picture class="header__image-wrapper">
+          <source media="(min-width: 1440px)" srcset="/Kickstarter/assets/2-1440-C9yWtJUn.jpg">
+
+          <source media="(min-width: 768px)" srcset="/Kickstarter/assets/2-768-CBN88Asg.jpg">
+
+          <img src="/Kickstarter/assets/1-320-DVXzvEaU.jpg" alt="Futuristic Wireless Speaker"
+           class="header__image">
+        </picture>
+      </div>
+    </header>
+    <div class="page__wrapper">
+
+      <main class="main container">
+        <section class="benefits" id="benefits">
+
+
+        </section>
+
+      </main>
+    </div>
+    <script src="src/scripts/main.js">document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        const menuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+        if (!menuToggle || !mobileMenu) {
+          console.warn("DOM!");
+          return;
+        }
+
+
+        const openMenu = () => {
+          mobileMenu.classList.add('is-open');
+          mobileMenu.setAttribute('aria-hidden', 'false');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          body.classList.add('lock');
+        };
+
+        const closeMenu = () => {
+          mobileMenu.classList.remove('is-open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          body.classList.remove('lock');
+        };
+
+        menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          if (mobileMenu.classList.contains('is-open')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        if (menuClose) {
+          menuClose.addEventListener('click', closeMenu);
+        }
+
+        menuLinks.forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+      });
+</script>
+  </body>
+
+</html>
