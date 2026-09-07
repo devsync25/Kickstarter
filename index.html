@@ -18,20 +18,22 @@
 
         <a href="/" class="header__logo-link"
         aria-label="CRAZYBABY Home">
-        <img src="./src/images/logo.svg" alt="" class="header__logo">
+          <img src="./src/images/logo.svg"
+            alt=""
+            class="header__logo">
         </a>
 
         <!---------- Menu mobile ---------->
         <aside class="header__mobile-menu nav" id="mobile-menu" aria-label="Mobile Navigation" aria-hidden="true">
-        <div class="nav__top">
+          <div class="nav__top">
           <a href="/" class="nav__logo-link" aria-label="CRAZYBABY Home">
             <img src="./src/images/logo.svg" alt="" class="header__logo">
           </a>
           <button type="button" class="nav__close" id="menu-close" aria-label="Close navigation menu">
             <img src="./src/images/icon-close.svg" alt="" class="nav__close-icon">
           </button>
-        </div>
-        <nav class="nav__body" aria-label="Mobile Menu Links">
+          </div>
+          <nav class="nav__body" aria-label="Mobile Menu Links">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#story" class="nav__link">OUR STORY</a>
@@ -46,38 +48,46 @@
               <a href="#contact" class="nav__link">GET IN TOUCH</a>
             </li>
           </ul>
-        </nav>
+          </nav>
 
-        <div class="nav__bottom-actions">
-          <a href="#specs" class="nav__specs">SPECS</a>
-          <div class="nav__lang" role="region" aria-label="Language selector">
-            <span class="nav__lang-item nav__lang-item--active" aria-current="page">EN</span>
-            <span class="nav__lang-divider" aria-hidden="true">/</span>
-            <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
+          <div class="nav__bottom-actions">
+            <a href="#specs" class="nav__specs">SPECS</a>
+            <div class="nav__lang" role="region"
+             aria-label="Language selector">
+              <a href="#en" class="nav__lang-item nav__lang-item--active"
+              hreflang="en">EN</a>
+              <span class="nav__lang-divider" aria-hidden="true">/</span>
+              <a href="#ua" class="nav__lang-item"
+              hreflang="uk">UA</a>
+            </div>
           </div>
-        </div>
-        <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
+          <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
         </aside>
 
         <!---------- Actions language (tablet, desktop) ---------->
         <div class="header__actions">
-        <a href="#specs" class="header__specs" id="specs-link">SPECS</a>
+          <a href="#specs" class="header__specs"
+          id="specs-link">SPECS</a>
 
-        <div class="header__lang" role="region" aria-label="Language selector">
-          <span class="nav__lang-item nav__lang-item--active" aria-current="page">EN</span>
-          <span class="nav__lang-divider" aria-hidden="true">/</span>
-          <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
-        </div>
+          <div class="header__lang" role="region"
+          aria-label="Language selector">
+            <a class="nav__lang-item nav__lang-item--active" aria-current="page">EN</a>
+            <span class="nav__lang-divider" aria-hidden="true">/</span>
+            <a href="#ua" class="nav__lang-item"
+             hreflang="uk">UA</a>
+          </div>
 
-        <a href="#buy" class="button button--primary header__buy-btn" id="buy-btn">BUY</a>
+          <a href="#buy" class="button button--primary header__buy-btn"
+           id="buy-btn">BUY</a>
 
-        <!--------------- Burger menu ---------->
-        <button class="header__burger" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+          <!--------------- Burger menu ---------->
+          <button class="header__burger" id="menu-toggle"
+          aria-expanded="false" aria-controls="mobile-menu"
           aria-label="Open navigation menu" type="button">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
         </div>
 
       </div>
@@ -91,17 +101,26 @@
           distinctly more layered.
           </p>
         </div>
-        <div class="header__image-wrapper">
-          <img src="./src/images/header/1-320.jpg"
-                    srcset="./src/images/header/1х320.jpg 320w,
-                      ./src/images/header/2-768.jpg 768w,
-                      ./src/images/header/3-1440.jpg 1440w"
-                       sizes="(max-width: 767px) 320px,
-                      (max-width: 1439px) 768px,
-                      1440px" alt="Futuristic Wireless Speaker"     class="header__image">
-        </div>
+        <picture class="header__image-wrapper">
+          <source media="(min-width: 1440px)" srcset="./src/images/header/2-1440.jpg">
+
+          <source media="(min-width: 768px)" srcset="./src/images/header/2-768.jpg">
+
+          <img src="./src/images/header/1-320.jpg" alt="Futuristic Wireless Speaker"
+           class="header__image">
+        </picture>
       </div>
     </header>
+    <div class="page__wrapper">
+
+      <main class="main container">
+        <section class="benefits" id="benefits">
+          
+
+        </section>
+
+      </main>
+    </div>
     <script src="src/scripts/main.js"></script>
   </body>
 

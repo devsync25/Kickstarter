@@ -82,47 +82,47 @@
     @include tablet {
       display: none;
     }
+  }
 
-    .nav__specs {
-      grid-column: span 1;
+  &__specs {
+    grid-column: span 1;
 
-      font-family: $ff-second;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 18px;
-      color: $c-gray-dark;
-    }
+    font-family: $ff-second;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: $c-gray-dark;
+  }
 
-    .nav__lang {
-      grid-column: span 1;
-      gap: 4px;
-      align-items: center;
-      justify-self: start;
+  &__lang {
+    grid-column: span 1;
+    gap: 4px;
+    align-items: center;
+    justify-self: start;
 
-      font-family: $ff-second;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 18px;
-      color: #828282;
-    }
+    font-family: $ff-second;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #828282;
+  }
 
-    .nav__lang-item {
-      font-family: $ff-second;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 18px;
-      color: #828282;
+  &__lang-item {
+    font-family: $ff-second;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #828282;
 
-      &--active {
-        font-weight: 400;
-        color: $c-text-dark;
-      }
-    }
-
-    .nav__lang-divider {
+    &--active {
       font-weight: 400;
       color: $c-text-dark;
     }
+  }
+
+  &__lang-divider {
+    font-weight: 400;
+    color: $c-text-dark;
   }
 
   &__buy-btn {
