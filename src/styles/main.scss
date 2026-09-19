@@ -6,6 +6,8 @@
 @import 'block/header';
 @import 'block/button';
 @import 'block/nav';
+@import 'block/hero';
+@import 'block/benefits';
 
 body {
   font-family: $ff-main;
@@ -15,4 +17,12 @@ body {
 
 .container {
   @include container;
+}
+
+.page__main {
+  padding-top: 130px;
+
+  @include tablet {
+    padding-top: 140px;
+  }
 }

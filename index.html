@@ -1,39 +1,36 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kickstarter</title>
   <link rel="stylesheet" href="src/styles/main.scss" />
-  </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
 
-  <body class="page__body">
+<body class="page__body">
 
-    <!---------- Header ---------->
-    <header class="header" id="header"
-     role="banner">
-      <div class="container header__container">
-        <!---------- Header Top ---------->
+  <!---------- Header ---------->
+  <header class="header" id="header" role="banner">
+    <div class="container header__container">
+      <!---------- Header Top ---------->
 
-        <a href="/" class="header__logo-link"
-        aria-label="CRAZYBABY Home">
-          <img src="./src/images/logo.svg"
-            alt=""
-            class="header__logo">
-        </a>
+      <a href="/" class="header__logo-link" aria-label="CRAZYBABY Home">
+        <img src="./src/images/logo.svg" alt="" class="header__logo">
+      </a>
 
-        <!---------- Menu mobile ---------->
-        <aside class="header__mobile-menu nav" id="mobile-menu" aria-label="Mobile Navigation" aria-hidden="true">
-          <div class="nav__top">
+      <!---------- Menu mobile ---------->
+      <aside class="header__mobile-menu nav" id="mobile-menu" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="nav__top">
           <a href="/" class="nav__logo-link" aria-label="CRAZYBABY Home">
             <img src="./src/images/logo.svg" alt="" class="header__logo">
           </a>
           <button type="button" class="nav__close" id="menu-close" aria-label="Close navigation menu">
             <img src="./src/images/icon-close.svg" alt="" class="nav__close-icon">
           </button>
-          </div>
-          <nav class="nav__body" aria-label="Mobile Menu Links">
+        </div>
+        <nav class="nav__body" aria-label="Mobile Menu Links">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#story" class="nav__link">OUR STORY</a>
@@ -48,132 +45,154 @@
               <a href="#contact" class="nav__link">GET IN TOUCH</a>
             </li>
           </ul>
-          </nav>
+        </nav>
 
-          <div class="nav__bottom-actions">
-            <a href="#specs" class="nav__specs">SPECS</a>
-            <div class="nav__lang" role="region"
-             aria-label="Language selector">
-              <a href="#en" class="nav__lang-item nav__lang-item--active"
-              hreflang="en">EN</a>
-              <span class="nav__lang-divider" aria-hidden="true">/</span>
-              <a href="#ua" class="nav__lang-item"
-              hreflang="uk">UA</a>
-            </div>
-          </div>
-          <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
-        </aside>
-
-        <!---------- Actions language (tablet, desktop) ---------->
-        <div class="header__actions">
-          <a href="#specs" class="header__specs"
-          id="specs-link">SPECS</a>
-
-          <div class="header__lang" role="region"
-          aria-label="Language selector">
-            <a class="nav__lang-item nav__lang-item--active" aria-current="page">EN</a>
+        <div class="nav__bottom-actions">
+          <a href="#specs" class="nav__specs">SPECS</a>
+          <div class="nav__lang" role="region" aria-label="Language selector">
+            <a href="#en" class="nav__lang-item nav__lang-item--active" hreflang="en">EN</a>
             <span class="nav__lang-divider" aria-hidden="true">/</span>
-            <a href="#ua" class="nav__lang-item"
-             hreflang="uk">UA</a>
+            <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
           </div>
+        </div>
+        <a href="#buy" class="button button--primary nav__buy-btn">BUY</a>
+      </aside>
 
-          <a href="#buy" class="button button--primary header__buy-btn"
-           id="buy-btn">BUY</a>
+      <!---------- Actions language (tablet, desktop) ---------->
+      <div class="header__actions">
+        <a href="#specs" class="header__specs" id="specs-link">SPECS</a>
 
-          <!--------------- Burger menu ---------->
-          <button class="header__burger" id="menu-toggle"
-          aria-expanded="false" aria-controls="mobile-menu"
-          aria-label="Open navigation menu" type="button">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </button>
+        <div class="header__lang" role="region" aria-label="Language selector">
+          <a class="nav__lang-item nav__lang-item--active" aria-current="page">EN</a>
+          <span class="nav__lang-divider" aria-hidden="true">/</span>
+          <a href="#ua" class="nav__lang-item" hreflang="uk">UA</a>
         </div>
 
-      </div>
+        <a href="#buy" class="button button--primary header__buy-btn" id="buy-btn">BUY</a>
 
-      <!---------- Header Main ---------->
-      <div class="header__main container">
-        <div class="header__text-content">
-          <h1 class="header__title">Futuristic Wireless Speaker</h1>
-          <p class="header__description">Luna’s performance is balanced and smooth in all frequency ranges which makes the
-          music both naturally pleasant and
-          distinctly more layered.
+        <!--------------- Burger menu ---------->
+        <button class="header__burger" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open navigation menu" type="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="page__main container">
+    <!---------- Hero ---------->
+    <section class="hero">
+      <div class="hero__main hero__container">
+        <div class="hero__text-content">
+          <h1 class="hero__title">Futuristic Wireless Speaker</h1>
+          <p class="hero__description">Luna’s performance is balanced and smooth in all frequency ranges which makes the
+            music both naturally pleasant and
+            distinctly more layered.
           </p>
         </div>
-        <picture class="header__image-wrapper">
+        <picture class="hero__image-wrapper">
           <source media="(min-width: 1440px)" srcset="./src/images/header/2-1440.jpg">
 
           <source media="(min-width: 768px)" srcset="./src/images/header/2-768.jpg">
 
-          <img src="./src/images/header/1-320.jpg" alt="Futuristic Wireless Speaker"
-           class="header__image">
+          <img src="./src/images/header/1-320.jpg" alt="Futuristic Wireless Speaker" class="hero__image">
         </picture>
       </div>
-    </header>
-    <div class="page__wrapper">
+    </section>
 
-      <main class="main container">
-        <section class="benefits" id="benefits">
+    <!---------- Benefits ---------->
+    <section class="benefits" id="benefits">
+      <h2 class="visually-hidden">Benefits</h2>
 
+      <!---------- Nav menu ---------->
+      <nav class="benefits__nav" aria-label="Main navigation">
+        <ul class="benefits__nav-list">
+          <li class="benefits__nav-item">
+            <a href="#our-story" class="benefits__nav-link">OUR STORY</a>
+          </li>
+          <li class="benefits__nav-item">
+            <a href="#about-us" class="benefits__nav-link">ABOUT US</a>
+          </li>
+          <li class="benefits__nav-item">
+            <a href="#features" class="benefits__nav-link">FEATURES</a>
+          </li>
+          <li class="benefits__nav-item">
+            <a href="#get-in-touch" class="benefits__nav-link">GET IN TOUCH</a>
+          </li>
+        </ul>
+      </nav>
 
-        </section>
+      <!---------- Benefits Gard (Slider Swiper - mobile) ---------->
+      <div class="benefits__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="benefits__slide swiper-slide">
+            <article class="benefits__card">
+              <div class="benefits__icon benefits__icon--design">
+                <img src="./src/images/benefits/icon-1.svg" alt="Futuristic Design">
+              </div>
+              <h3 class="benefits__title">Futuristic Design</h3>
+              <p class="benefits__description">To give Luna a truly flawless look, we specifically picked aircraft grade
+                aluminum as its material and adopted both
+                three-dimensional stretch-bending technology and a high precision cold forging technique.
+              </p>
+            </article>
+          </div>
 
-      </main>
-    </div>
-    <script src="src/scripts/main.js">document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
+          <div class="benefits__slide swiper-slide">
+            <article class="benefits__card">
+              <div class="benefits__icon benefits__icon--speaker">
+                <img src="./src/images/benefits/icon-2.svg" alt="Tweeter Speaker System">
+              </div>
+              <h3 class="benefits__title">Tweeter Speaker System</h3>
+              <p class="benefits__description">To deliver a more layered sound performance better than a sole full-range
+                speaker, our team equipped Luna with one more
+                tweeter speaker responsible for high-frequency sound independently.
+              </p>
+            </article>
+          </div>
 
-        const menuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+          <div class="benefits__slide swiper-slide">
+            <article class="benefits__card">
+              <div class="benefits__icon benefits__icon--wifi">
+                <img src="./src/images/benefits/icon-3.svg" alt="Multiroom System  ">
+              </div>
+              <h3 class="benefits__title">Multiroom System</h3>
+              <p class="benefits__description">Luna is natively compatible with your home Wi-Fi. Set up multiple
+                speakers in different rooms to expand your music
+                experience into the entire house.
+              </p>
+            </article>
+          </div>
 
-        if (!menuToggle || !mobileMenu) {
-          console.warn("DOM!");
-          return;
-        }
+          <div class="benefits__slide swiper-slide">
+            <article class="benefits__card">
+              <div class="benefits__icon benefits__icon--light">
+                <img src="./src/images/benefits/icon-4.svg" alt="Intuitive Lighting System">
+              </div>
+              <h3 class="benefits__title">Intuitive Lighting System</h3>
+              <p class="benefits__description">An intuitive user interface allows you to adjust the hue and saturation
+                of color
+                for lighting that fits any mood and
+                situation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
+     <!---------- Product showcase ---------->
+    <section class="product-showcase">
+      <h2 class="visually-hidden">Luna Presentation</h2>
 
-        const openMenu = () => {
-          mobileMenu.classList.add('is-open');
-          mobileMenu.setAttribute('aria-hidden', 'false');
-          menuToggle.setAttribute('aria-expanded', 'true');
-          body.classList.add('lock');
-        };
+    </section>
 
-        const closeMenu = () => {
-          mobileMenu.classList.remove('is-open');
-          mobileMenu.setAttribute('aria-hidden', 'true');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          body.classList.remove('lock');
-        };
-
-        menuToggle.addEventListener('click', (e) => {
-          e.stopPropagation();
-
-          if (mobileMenu.classList.contains('is-open')) {
-            closeMenu();
-          } else {
-            openMenu();
-          }
-        });
-
-        if (menuClose) {
-          menuClose.addEventListener('click', closeMenu);
-        }
-
-        menuLinks.forEach(link => {
-          link.addEventListener('click', closeMenu);
-        });
-
-        window.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-            closeMenu();
-          }
-        });
-      });
-</script>
-  </body>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="src/scripts/main.js"></script>
+</body>
 
 </html>

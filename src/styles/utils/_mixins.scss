@@ -5,6 +5,12 @@
   }
 }
 
+@mixin tablet-small {
+  @media (min-width: $bp-tablet-small) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $bp-tablet) {
     @content;
@@ -24,7 +30,7 @@
   padding-right: $container-padding-mobile;
   padding-left: $container-padding-mobile;
 
-  @include tablet {
+  @include tablet-small {
     padding-right: $container-padding-tablet;
     padding-left: $container-padding-tablet;
   }
@@ -52,9 +58,9 @@
   grid-template-columns: repeat($columns-mobile, 1fr);
   gap: 0 $gutter-mobile;
 
-  @include tablet {
-    grid-template-columns: repeat($columns-tablet, 1fr);
-    gap: 0 $gutter-tablet;
+  @include tablet-small {
+    grid-template-columns: repeat($columns-tablet-small, 1fr);
+    gap: 0 $gutter-tablet-small;
   }
 
   @include desktop {
