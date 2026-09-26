@@ -64,10 +64,109 @@ languageItems.forEach((item) => {
 });
 
 // ---------- Benefits Card (Slider Swiper - mobile) ----------
-
 if (window.innerWidth < 640) {
   new Swiper('.benefits__slider', {
     slidesPerView: 1,
     spaceBetween: 20,
+  });
+}
+
+// ---------- Features Slider ----------
+if (window.innerWidth < 1280) {
+  const featuresCurrent = document.querySelector('.features__counter-current');
+
+  const featuresTotal = document.querySelector('.features__counter-total');
+
+  if (featuresCurrent && featuresTotal) {
+    new Swiper('#features-slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+      navigation: {
+        prevEl: '#features__prev',
+        nextEl: '#features__next',
+      },
+
+      on: {
+        init(swiper) {
+          featuresCurrent.textContent = String(swiper.realIndex + 1).padStart(
+            2,
+            '0',
+          );
+
+          featuresTotal.textContent = String(swiper.slides.length).padStart(
+            2,
+            '0',
+          );
+        },
+
+        slideChange(swiper) {
+          featuresCurrent.textContent = String(swiper.realIndex + 1).padStart(
+            2,
+            '0',
+          );
+        },
+      },
+    });
+  }
+}
+
+// ---------- Questions Form ----------
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#questions-form');
+
+  if (!form) {
+    return;
+  }
+
+  const email = document.querySelector('#questions-email');
+  const message = document.querySelector('#questions-message');
+  const submit = document.querySelector('#questions-submit');
+
+  const updateFormState = () => {
+    submit.disabled = !form.checkValidity();
+  };
+
+  const clearSuccessState = (field) => {
+    field.classList.remove('is-success');
+  };
+
+  email.addEventListener('input', () => {
+    clearSuccessState(email);
+    updateFormState();
+  });
+
+  message.addEventListener('input', () => {
+    clearSuccessState(message);
+    updateFormState();
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+
+      return;
+    }
+
+    email.classList.add('is-success');
+    message.classList.add('is-success');
+  });
+
+  updateFormState();
+});
+
+const scrollToTopBtn = document.querySelector('.footer__scroll-top');
+
+if (scrollToTopBtn) {
+  scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   });
 }

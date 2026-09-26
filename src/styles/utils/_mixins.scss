@@ -68,3 +68,13 @@
     column-gap: $gutter-desktop;
   }
 }
+
+@mixin full-width-left {
+  width: calc(100% + #{$container-padding-tablet});
+  margin-left: -#{$container-padding-tablet};
+}
+
+@mixin full-width-right {
+  width: calc(100% + #{$container-padding-tablet});
+  margin-right: -#{$container-padding-tablet};
+}

@@ -14,7 +14,7 @@
     min-width: 0;
     margin-left: -$container-padding-mobile;
 
-    @include tablet {
+    @include tablet-small {
       grid-column: 4 / -1;
       grid-row: 1;
       width: 100%;

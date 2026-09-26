@@ -42,7 +42,9 @@ button,
 input,
 textarea,
 select {
+  border: 0;
   font: inherit;
+  outline: 0;
 }
 
 button {
